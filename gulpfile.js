@@ -18,8 +18,8 @@ gulp.task('styles', function () {
     return gulp.src("src/sass/*.+(scss|sass)")
             .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
             .pipe(rename({
-                prefix: "",
-                suffix: ".min",
+                prefix: '',
+                suffix: '.min',
               }))
             .pipe(autoprefixer())
             .pipe(cleanCSS({compatibility: 'ie8'}))
